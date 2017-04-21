@@ -1,0 +1,11 @@
+<h1>
+  {{title}}
+</h1>
+
+<h3>Parent Value: {{ numberToChange }}</h3>
+
+<app-child [valueToChange]="objectToChange"
+          (resetValueAtParent)="resetToDefaultValue()"
+          (resetReferenceOnParent)="resetToNewReference()"
+          (parentValueChanged)="keepChildValue($event)">
+</app-child>
